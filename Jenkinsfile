@@ -38,7 +38,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-         sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11,OS=13.0" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
+         sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "name=iPhone 11" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
       }
     } 
 
