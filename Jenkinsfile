@@ -42,17 +42,7 @@ pipeline {
          //sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "platform=iOS,name=iPhone de Soporte (2)" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
       }
     } 
-    /*
-    stage('Compile & Unit Tests') {
-      steps{
-        echo "------------>Unit Tests<------------"
-        //sh "killall 'Simulator' 2&> /dev/null || true"
-        //sh "xcrun simctl erase all"
-         sh "xcodebuild -scheme ADNAlejandroVilla -enableCodeCoverage YES -configuration build test CODE_SIGNING_REQUIRED=NO | tee build/xcodebuild-test.log | xcpretty -r junit --output build/reports/junit.xml"
-      }
-    }
-    */
-
+    
     stage('Static Code Analysis') {
       steps{
         echo '------------>Análisis de código estático<------------'
@@ -62,6 +52,14 @@ pipeline {
       }
     }
 
+    stage('Compile & Unit Tests') {
+      steps{
+        echo "------------>Unit Tests<------------"
+        //sh "killall 'Simulator' 2&> /dev/null || true"
+        //sh "xcrun simctl erase all"
+         sh 'xcodebuild -scheme "ADNAlejandroVilla" -enableCodeCoverage YES -configuration build test -destination "platform=iOS,id=05e2c9f07d7f7df8c72ab78b594c681977407cc2" CODE_SIGNING_REQUIRED=NO | tee build/xcodebuild-test.log | xcpretty -r junit --output build/reports/junit.xml'
+      }
+    }
   }
 
   post {
