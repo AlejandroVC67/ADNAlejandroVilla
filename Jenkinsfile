@@ -38,7 +38,8 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-         sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "platform=iOS,name=iPhone de Soporte (2),id=id:05e2c9f07d7f7df8c72ab78b594c681977407cc2" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
+        sh 'xcodebuild -scheme "ADNAlejandroVilla" clean build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO"'
+         //sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "platform=iOS,name=iPhone de Soporte (2)" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
       }
     } 
     /*
