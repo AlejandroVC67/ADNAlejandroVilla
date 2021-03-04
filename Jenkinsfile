@@ -38,7 +38,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-         sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "name=iPhone de Soporte (2)" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
+         sh 'xcodebuild -scheme "ADNAlejandroVilla" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone 11,OS=13.0" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
       }
     } 
     /*
@@ -49,15 +49,14 @@ pipeline {
         //sh "xcrun simctl erase all"
          sh "xcodebuild -scheme ADNAlejandroVilla -enableCodeCoverage YES -configuration Debug -destination name=iPhone 11,OS=13.0 test | tee build/xcodebuild-test.log | xcpretty -r junit --output build/reports/junit.xml"
       }
-    }*/
+    }
 
-    /*
     stage('Static Code Analysis') {
       steps{
         echo '------------>Análisis de código estático<------------'
-        withSonarQubeEnv('Sonar') {
+        /*withSonarQubeEnv('Sonar') {
             sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
-        }
+        }*/
       }
     }
     */
