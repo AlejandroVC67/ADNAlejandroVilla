@@ -28,9 +28,9 @@ pipeline {
             gitTool: 'Default', 
             submoduleCfg: [], 
             userRemoteConfigs: [[
-            credentialsId: 'Github_AlejandroVC67', 
-            url:'https://github.com/AlejandroVC67/ADNAlejandroVilla'
-            ]]
+              credentialsId: 'Github_AlejandroVC67', 
+              url:'https://github.com/AlejandroVC67/ADNAlejandroVilla'
+              ]]
             ])
         }
     }

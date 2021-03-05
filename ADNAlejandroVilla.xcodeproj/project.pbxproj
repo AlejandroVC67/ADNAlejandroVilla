@@ -16,6 +16,7 @@
 		BCADBCB425F03E26005F403A /* ADNAlejandroVillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCB325F03E26005F403A /* ADNAlejandroVillaTests.swift */; };
 		BCADBCBF25F03E26005F403A /* ADNAlejandroVillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */; };
 		BCC2DF0225F2A0BF00D2C8E0 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2DF0125F2A0BF00D2C8E0 /* Test.swift */; };
+		BCC2DF0F25F2A69E00D2C8E0 /* xmltest.xml in Resources */ = {isa = PBXBuildFile; fileRef = BCC2DF0E25F2A69E00D2C8E0 /* xmltest.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADNAlejandroVillaUITests.swift; sourceTree = "<group>"; };
 		BCADBCC025F03E26005F403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCC2DF0125F2A0BF00D2C8E0 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		BCC2DF0E25F2A69E00D2C8E0 /* xmltest.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = xmltest.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		BCADBC9B25F03E21005F403A /* ADNAlejandroVilla */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2DF0E25F2A69E00D2C8E0 /* xmltest.xml */,
 				BCADBC9C25F03E21005F403A /* AppDelegate.swift */,
 				BCADBC9E25F03E22005F403A /* SceneDelegate.swift */,
 				BCADBCA025F03E22005F403A /* ViewController.swift */,
@@ -237,6 +240,7 @@
 				BCADBCA925F03E25005F403A /* LaunchScreen.storyboard in Resources */,
 				BCADBCA625F03E25005F403A /* Assets.xcassets in Resources */,
 				BCADBCA425F03E22005F403A /* Main.storyboard in Resources */,
+				BCC2DF0F25F2A69E00D2C8E0 /* xmltest.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
