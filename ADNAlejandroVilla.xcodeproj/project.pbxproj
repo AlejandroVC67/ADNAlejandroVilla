@@ -15,6 +15,7 @@
 		BCADBCA925F03E25005F403A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */; };
 		BCADBCB425F03E26005F403A /* ADNAlejandroVillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCB325F03E26005F403A /* ADNAlejandroVillaTests.swift */; };
 		BCADBCBF25F03E26005F403A /* ADNAlejandroVillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */; };
+		BCC2DF0225F2A0BF00D2C8E0 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2DF0125F2A0BF00D2C8E0 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BCADBCBA25F03E26005F403A /* ADNAlejandroVillaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNAlejandroVillaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADNAlejandroVillaUITests.swift; sourceTree = "<group>"; };
 		BCADBCC025F03E26005F403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC2DF0125F2A0BF00D2C8E0 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				BCADBCA525F03E25005F403A /* Assets.xcassets */,
 				BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */,
 				BCADBCAA25F03E25005F403A /* Info.plist */,
+				BCC2DF0125F2A0BF00D2C8E0 /* Test.swift */,
 			);
 			path = ADNAlejandroVilla;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCADBCA125F03E22005F403A /* ViewController.swift in Sources */,
+				BCC2DF0225F2A0BF00D2C8E0 /* Test.swift in Sources */,
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
 			);
