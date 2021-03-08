@@ -15,6 +15,8 @@
 		BCADBCA925F03E25005F403A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */; };
 		BCADBCB425F03E26005F403A /* ADNAlejandroVillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCB325F03E26005F403A /* ADNAlejandroVillaTests.swift */; };
 		BCADBCBF25F03E26005F403A /* ADNAlejandroVillaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */; };
+		BCC2E04025F6C02F00D2C8E0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */; };
+		BCC2E04125F6C02F00D2C8E0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BCC2E04225F6C02F00D2C8E0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BCC2E04125F6C02F00D2C8E0 /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BCADBC9925F03E21005F403A /* ADNAlejandroVilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADNAlejandroVilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBC9C25F03E21005F403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +65,7 @@
 		BCADBCBA25F03E26005F403A /* ADNAlejandroVillaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ADNAlejandroVillaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBCBE25F03E26005F403A /* ADNAlejandroVillaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADNAlejandroVillaUITests.swift; sourceTree = "<group>"; };
 		BCADBCC025F03E26005F403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC2E04025F6C02F00D2C8E0 /* Domain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 				BCADBCB225F03E25005F403A /* ADNAlejandroVillaTests */,
 				BCADBCBD25F03E26005F403A /* ADNAlejandroVillaUITests */,
 				BCADBC9A25F03E21005F403A /* Products */,
+				BCC2E03E25F6C02F00D2C8E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +147,14 @@
 			path = ADNAlejandroVillaUITests;
 			sourceTree = "<group>";
 		};
+		BCC2E03E25F6C02F00D2C8E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +165,7 @@
 				BCADBC9525F03E21005F403A /* Sources */,
 				BCADBC9625F03E21005F403A /* Frameworks */,
 				BCADBC9725F03E21005F403A /* Resources */,
+				BCC2E04225F6C02F00D2C8E0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
