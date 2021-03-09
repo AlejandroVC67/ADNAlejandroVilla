@@ -38,7 +38,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-        sh 'xcodebuild -scheme "ADNAlejandroVilla" clean build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO"'
+        sh 'xcodebuild -scheme "Domain" clean build CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED="NO"'
       }
     } 
     
