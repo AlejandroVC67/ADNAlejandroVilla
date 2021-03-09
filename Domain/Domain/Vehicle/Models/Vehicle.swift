@@ -17,3 +17,9 @@ public struct Vehicle: Identifiable, Billable {
     //MARK: - Billable
     let startDate: Date
 }
+
+public extension Vehicle {
+    static func ==(lhs: Vehicle, rhs: Vehicle) -> Bool {
+        return lhs.plates == rhs.plates
+    }
+}

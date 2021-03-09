@@ -20,6 +20,7 @@
 		BCC2E09025F7DDD800D2C8E0 /* Billable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E08F25F7DDD800D2C8E0 /* Billable.swift */; };
 		BCC2E09C25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */; };
 		BCC2E0A025F7EF8600D2C8E0 /* ParkingDebtCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E09F25F7EF8600D2C8E0 /* ParkingDebtCollector.swift */; };
+		BCC2E0AE25F81B4B00D2C8E0 /* ParkingCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E0AD25F81B4B00D2C8E0 /* ParkingCheckerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BCC2E08F25F7DDD800D2C8E0 /* Billable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billable.swift; sourceTree = "<group>"; };
 		BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDebtCollectorTests.swift; sourceTree = "<group>"; };
 		BCC2E09F25F7EF8600D2C8E0 /* ParkingDebtCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDebtCollector.swift; sourceTree = "<group>"; };
+		BCC2E0AD25F81B4B00D2C8E0 /* ParkingCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingCheckerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +105,9 @@
 		BCC2E02D25F6C00600D2C8E0 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2E0AC25F81B3900D2C8E0 /* Checker */,
+				BCC2E0AB25F81B3200D2C8E0 /* Collector */,
 				BCC2E03025F6C00600D2C8E0 /* Info.plist */,
-				BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -186,6 +189,22 @@
 				BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		BCC2E0AB25F81B3200D2C8E0 /* Collector */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */,
+			);
+			path = Collector;
+			sourceTree = "<group>";
+		};
+		BCC2E0AC25F81B3900D2C8E0 /* Checker */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E0AD25F81B4B00D2C8E0 /* ParkingCheckerTests.swift */,
+			);
+			path = Checker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC2E0AE25F81B4B00D2C8E0 /* ParkingCheckerTests.swift in Sources */,
 				BCC2E09C25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

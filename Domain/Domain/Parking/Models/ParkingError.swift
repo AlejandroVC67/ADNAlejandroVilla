@@ -11,4 +11,5 @@ enum ParkingError: Error {
     case noCarAvailability
     case noBikeAvailability
     case unableToEnter
+    case duplicatePlates
 }

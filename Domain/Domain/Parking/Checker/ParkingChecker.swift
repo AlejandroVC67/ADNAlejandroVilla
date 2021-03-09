@@ -11,6 +11,7 @@ protocol ParkingCheckerProtocol {
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError>
     static func checkAvailability(parkedVehicles: [Vehicle], type: VehicleType) -> Result<Bool, ParkingError>
     static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError>
+    static func checkPlatesDuplication(parkedVehicles: [Vehicle], Vehicle: Vehicle) -> Result<Bool, ParkingError>
 }
 
 class ParkingChecker: ParkingCheckerProtocol {
@@ -21,8 +22,13 @@ class ParkingChecker: ParkingCheckerProtocol {
     }
     
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
+        let vehicleAlreadyParked = checkPlatesDuplication(parkedVehicles: parkedVehicles, Vehicle: vehicle)
         let isAParkingAvailable = checkAvailability(parkedVehicles: parkedVehicles, type: vehicle.type)
         let platesValidation = checkPlates(vehicle: vehicle)
+        
+        guard let _ = check(validation: vehicleAlreadyParked) else {
+            return vehicleAlreadyParked
+        }
         
         guard let _ = check(validation: isAParkingAvailable) else {
             return isAParkingAvailable
@@ -49,7 +55,7 @@ class ParkingChecker: ParkingCheckerProtocol {
     }
     
     static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError> {
-        let weekDayNumber = Calendar.current.component(.weekday, from: Date())
+        let weekDayNumber = Calendar.current.component(.weekday, from: vehicle.startDate)
         guard let day = WeekDay(rawValue: weekDayNumber) else {
             return .failure(.unableToEnter)
         }
@@ -58,13 +64,16 @@ class ParkingChecker: ParkingCheckerProtocol {
             return .failure(.unableToEnter)
         }
         
-        if firstLetter == Constants.letterA && day != .monday || day != .sunday {
-            return.failure(.unableToEnter)
+        if firstLetter == Constants.letterA && day == .monday || firstLetter == Constants.letterA && day == .sunday {
+            return .success(true)
         }
-        
-        return .success(true)
+
+        return .failure(.unableToEnter)
     }
     
+    static func checkPlatesDuplication(parkedVehicles: [Vehicle], Vehicle: Vehicle) -> Result<Bool, ParkingError> {
+        return parkedVehicles.contains(where: { $0 == Vehicle }) ? .failure(.duplicatePlates) : .success(true)
+    }
     
     private static func check(validation: Result<Bool, ParkingError>) -> Bool? {
         guard let _ = try? validation.get() else {
@@ -73,5 +82,4 @@ class ParkingChecker: ParkingCheckerProtocol {
         
         return true
     }
-    
 }
