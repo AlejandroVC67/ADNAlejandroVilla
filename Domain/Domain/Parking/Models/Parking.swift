@@ -30,7 +30,7 @@ class Parking: ParkingRepository {
     
     static func remove(vehicle: Vehicle) -> Double {
         let price = ParkingDebtCollector(vehicle: vehicle).calculateCheckout()
-        vehicles.removeAll(where: { $0.plates == vehicle.plates })
+        vehicles.removeAll(where: { $0 == vehicle })
         return price
     }
 }
