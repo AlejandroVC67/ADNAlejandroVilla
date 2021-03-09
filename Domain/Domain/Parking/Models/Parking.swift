@@ -26,6 +26,11 @@ class Parking: ParkingRepository {
             // Return error
             print(error)
         }
-        
+    }
+    
+    static func remove(vehicle: Vehicle) -> Double {
+        let price = ParkingDebtCollector(vehicle: vehicle).calculateCheckout()
+        vehicles.removeAll(where: { $0.plates == vehicle.plates })
+        return price
     }
 }

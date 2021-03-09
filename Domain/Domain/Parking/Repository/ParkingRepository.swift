@@ -12,4 +12,5 @@ protocol ParkingRepository {
     
     static func getAllVehicles() -> [Vehicle]
     static func add(vehicle: Vehicle)
+    static func remove(vehicle: Vehicle) -> Double
 }

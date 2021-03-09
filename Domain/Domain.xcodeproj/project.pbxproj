@@ -17,6 +17,9 @@
 		BCC2E06C25F6DFE400D2C8E0 /* ParkingChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */; };
 		BCC2E07225F6E12C00D2C8E0 /* ParkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */; };
 		BCC2E07725F6E4D000D2C8E0 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E07625F6E4D000D2C8E0 /* WeekDay.swift */; };
+		BCC2E09025F7DDD800D2C8E0 /* Billable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E08F25F7DDD800D2C8E0 /* Billable.swift */; };
+		BCC2E09C25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */; };
+		BCC2E0A025F7EF8600D2C8E0 /* ParkingDebtCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E09F25F7EF8600D2C8E0 /* ParkingDebtCollector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingChecker.swift; sourceTree = "<group>"; };
 		BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingError.swift; sourceTree = "<group>"; };
 		BCC2E07625F6E4D000D2C8E0 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
+		BCC2E08F25F7DDD800D2C8E0 /* Billable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billable.swift; sourceTree = "<group>"; };
+		BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDebtCollectorTests.swift; sourceTree = "<group>"; };
+		BCC2E09F25F7EF8600D2C8E0 /* ParkingDebtCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDebtCollector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC2E03025F6C00600D2C8E0 /* Info.plist */,
+				BCC2E09B25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift */,
 			);
 			path = DomainTests;
 			sourceTree = "<group>";
@@ -105,10 +112,10 @@
 		BCC2E06925F6D9E300D2C8E0 /* Parking */ = {
 			isa = PBXGroup;
 			children = (
-				BCC2E06125F6D91500D2C8E0 /* Parking.swift */,
-				BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */,
-				BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */,
-				BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */,
+				BCC2E0AA25F81AA200D2C8E0 /* Repository */,
+				BCC2E0A925F81A9700D2C8E0 /* Collector */,
+				BCC2E0A825F81A8F00D2C8E0 /* Checker */,
+				BCC2E0A725F81A7500D2C8E0 /* Models */,
 			);
 			path = Parking;
 			sourceTree = "<group>";
@@ -116,9 +123,8 @@
 		BCC2E06A25F6D9F400D2C8E0 /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
-				BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */,
-				BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */,
-				BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */,
+				BCC2E0A625F81A6000D2C8E0 /* Models */,
+				BCC2E0A525F81A5800D2C8E0 /* Protocols */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -129,6 +135,57 @@
 				BCC2E07625F6E4D000D2C8E0 /* WeekDay.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BCC2E0A525F81A5800D2C8E0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */,
+				BCC2E08F25F7DDD800D2C8E0 /* Billable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BCC2E0A625F81A6000D2C8E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */,
+				BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCC2E0A725F81A7500D2C8E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E06125F6D91500D2C8E0 /* Parking.swift */,
+				BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BCC2E0A825F81A8F00D2C8E0 /* Checker */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */,
+			);
+			path = Checker;
+			sourceTree = "<group>";
+		};
+		BCC2E0A925F81A9700D2C8E0 /* Collector */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E09F25F7EF8600D2C8E0 /* ParkingDebtCollector.swift */,
+			);
+			path = Collector;
+			sourceTree = "<group>";
+		};
+		BCC2E0AA25F81AA200D2C8E0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +253,7 @@
 					};
 					BCC2E02825F6C00600D2C8E0 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -247,6 +305,8 @@
 				BCC2E05025F6D51800D2C8E0 /* VehicleType.swift in Sources */,
 				BCC2E04C25F6D4D100D2C8E0 /* Identifiable.swift in Sources */,
 				BCC2E05425F6D56300D2C8E0 /* Vehicle.swift in Sources */,
+				BCC2E0A025F7EF8600D2C8E0 /* ParkingDebtCollector.swift in Sources */,
+				BCC2E09025F7DDD800D2C8E0 /* Billable.swift in Sources */,
 				BCC2E07225F6E12C00D2C8E0 /* ParkingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC2E09C25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DomainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.com.ceiba.alejandrovilla.DomainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DomainTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
