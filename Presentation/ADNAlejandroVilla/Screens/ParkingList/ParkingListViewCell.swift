@@ -80,7 +80,12 @@ class ParkingListViewCell: UITableViewCell {
     private var viewModel: ParkingListCellViewModel?
     
     func setupView(viewModel: ParkingListCellViewModel) {
-        contentView.addSubViews([platesLabel, vehicleTypeLabel, cylinderLabel, dateLabel])
+        contentView.addSubViews([platesLabel, vehicleTypeLabel, cylinderLabel, dateLabel, removeVehicleButton])
+        self.viewModel = viewModel
+        
+        guard let viewModel = self.viewModel else {
+            return
+        }
         
         platesLabel.attributedText = configureLabel(title: Constants.Plates.title, text: viewModel.plates)
         vehicleTypeLabel.attributedText = configureLabel(title: Constants.VehicleType.title, text: viewModel.type)
@@ -91,6 +96,7 @@ class ParkingListViewCell: UITableViewCell {
         setupVehicleTypeLabelConstraints()
         setupCylinderLabelLabelConstraints()
         setupDateLabelConstraints()
+        setupRemoveVehicleConstraints()
     }
     
     @objc private func removeVehicle(_ sender: UIButton) {
@@ -130,7 +136,12 @@ class ParkingListViewCell: UITableViewCell {
         dateLabel.topAnchor.constraint(equalTo: cylinderLabel.bottomAnchor, constant: Constants.Date.padding.top).isActive = true
         dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.Date.padding.left).isActive = true
         dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constants.Date.padding.right).isActive = true
-        dateLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.Date.padding.bottom).isActive = true
-        
+    }
+    
+    private func setupRemoveVehicleConstraints() {
+        removeVehicleButton.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: Constants.Remove.padding.top).isActive = true
+        removeVehicleButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.Remove.padding.left).isActive = true
+        removeVehicleButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constants.Remove.padding.right).isActive = true
+        removeVehicleButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.Remove.padding.bottom).isActive = true
     }
 }

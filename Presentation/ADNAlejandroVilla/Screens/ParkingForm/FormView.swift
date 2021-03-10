@@ -39,7 +39,7 @@ class FormView: UIScrollView {
         }
         
         enum ParkedListButton {
-            static let text = "Check Parked Cars"
+            static let text = "Check Parked Vehicles"
             static let padding: UIEdgeInsets = .init(top: 30, left: 16, bottom: -20, right: -16)
         }
         

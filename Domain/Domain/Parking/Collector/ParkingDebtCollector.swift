@@ -20,9 +20,11 @@ class ParkingDebtCollector {
     }
     
     enum ParkingConstants {
-        static let minHoursOfDay = 9
-        static let maxHoursOfDay = 24
+        static let minHoursOfDay: Double = 9
+        static let maxHoursOfDay: Double = 24
         static let bikeCylinderCeiling = 500
+        static let minHoursBillable: Double = 1
+        static let valueZero: Double = 0
     }
     
     private var vehicle: Vehicle
@@ -34,7 +36,7 @@ class ParkingDebtCollector {
     }
     
     func calculateCheckout() -> Double {
-        var price: Double = 0
+        var price: Double = ParkingConstants.valueZero
         let parkedTime = getParkedTime()
         
         switch vehicle.type {
@@ -57,21 +59,23 @@ class ParkingDebtCollector {
     }
     
     private func carPricePer(time: (days: Double, hours: Double)) -> Double {
-        var price: Double = 0
+        var price: Double = ParkingConstants.valueZero
         
-        if  time.days == 0 && time.hours == 9 {
+        if  time.days == ParkingConstants.valueZero && time.hours == ParkingConstants.minHoursOfDay {
             price = CarPrices.valueDay
-        } else if time.days < 1 && time.hours > 9 {
-            price = CarPrices.valueDay + (time.hours - 9) * CarPrices.valueHour
+        } else if time.days < 1 && time.hours > ParkingConstants.minHoursOfDay {
+            price = CarPrices.valueDay + (time.hours - ParkingConstants.minHoursOfDay) * CarPrices.valueHour
         } else {
-            price = time.days * CarPrices.valueDay + time.hours * CarPrices.valueHour
+            let billableHours = time.hours == 0 ? ParkingConstants.minHoursBillable : time.hours
+            price = time.days * CarPrices.valueDay + billableHours * CarPrices.valueHour
         }
         
         return price
     }
     
     private func bikePricePer(time: (days: Double, hours: Double)) -> Double {
-        return time.days * BikePrices.valueDay + time.hours * BikePrices.valueHour
+        let billableHours = time.hours == 0 ? ParkingConstants.minHoursBillable : time.hours
+        return time.days * BikePrices.valueDay + billableHours * BikePrices.valueHour
     }
     
     private func addCylinderCost() -> Double {

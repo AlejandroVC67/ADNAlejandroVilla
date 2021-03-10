@@ -25,8 +25,8 @@ class ParkingListViewModel: NSObject {
     }
     
     func handleCheckout(basedOn plates: String) -> Double {
-        updateData()
         let price = parkingManager.exitVehicle(plates: plates)
+        updateData()
         return price
     }
 }
