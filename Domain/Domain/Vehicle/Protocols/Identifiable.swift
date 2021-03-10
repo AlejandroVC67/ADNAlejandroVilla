@@ -9,7 +9,6 @@ import Foundation
 
 protocol Identifiable: Equatable {
     var plates: String { get }
-    var brand: String { get }
     var type: VehicleType { get }
     var cylinder: Int { get }
 }

@@ -64,11 +64,12 @@ class ParkingChecker: ParkingCheckerProtocol {
             return .failure(.unableToEnter)
         }
         
-        if firstLetter == Constants.letterA && day == .monday || firstLetter == Constants.letterA && day == .sunday {
-            return .success(true)
+        if firstLetter == Constants.letterA && (day != .monday && day != .sunday) {
+            return .failure(.unableToEnter)
         }
+        
 
-        return .failure(.unableToEnter)
+        return .success(true)
     }
     
     static func checkPlatesDuplication(parkedVehicles: [Vehicle], Vehicle: Vehicle) -> Result<Bool, ParkingError> {

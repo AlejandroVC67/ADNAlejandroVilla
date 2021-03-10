@@ -8,8 +8,12 @@
 import UIKit
 import Domain
 
-protocol FormDelegate: class {
-    func handleParkIn()
+protocol FormLogicDelegate: class {
+    func handleParkIn(for vehicle: Vehicle)
+    
+}
+
+protocol FormUIDelegate: UITextFieldDelegate {
     func checkParkedVehicles()
 }
 
@@ -115,13 +119,20 @@ class FormView: UIScrollView {
         return button
     }()
     
-    private weak var textFieldDelegate: UITextFieldDelegate?
-    private weak var formDelegate: FormDelegate?
+    private weak var formUIDelegate: FormUIDelegate?
+    private weak var formLogicDelegate: FormLogicDelegate?
+    private var vehicleType: VehicleType = .car
     
-    func setupView(delegate: UITextFieldDelegate) {
-        textFieldDelegate = delegate
-        platesTextField.delegate = textFieldDelegate
-        cylinderTextField.delegate = textFieldDelegate
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        platesTextField.endEditing(true)
+        cylinderTextField.endEditing(true)
+    }
+    
+    func setupView(formUIDelegate: FormUIDelegate, formLogicDelegate: FormLogicDelegate) {
+        self.formUIDelegate = formUIDelegate
+        self.formLogicDelegate = formLogicDelegate
+        platesTextField.delegate = self.formUIDelegate
+        cylinderTextField.delegate = self.formUIDelegate
         
         addSubViews([platesTitleLabel, platesTextField, cylinderTitleLabel, cylinderTextField, segmentedControl, parkInButton, parkedListButton])
         
@@ -135,23 +146,23 @@ class FormView: UIScrollView {
     }
     
     @objc private func selectVehicle(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            print("car")
-            break
-        case 1:
-            print("bike")
-            break
-        default: break
-        }
+        vehicleType = VehicleType.allCases[sender.selectedSegmentIndex]
     }
     
     @objc private func validateAndPark(_ sender: UIButton) {
-        formDelegate?.handleParkIn()
+        guard let plates = platesTextField.text,
+              let cylinderAsText = cylinderTextField.text,
+              let cylinder = Int(cylinderAsText) else {
+            return
+        }
+        
+        let vehicle = Vehicle(plates: plates, type: vehicleType, cylinder: cylinder)
+        formLogicDelegate?.handleParkIn(for: vehicle)
+        resetForm()
     }
     
     @objc private func checkParkedVehicles(_ sender: UIButton) {
-        formDelegate?.checkParkedVehicles()
+        formUIDelegate?.checkParkedVehicles()
     }
     
     private func addPlatesTitleConstraints() {
@@ -197,8 +208,9 @@ class FormView: UIScrollView {
         parkedListButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: Constants.ParkedListButton.padding.bottom).isActive = true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        platesTextField.endEditing(true)
-        cylinderTextField.endEditing(true)
+    private func resetForm() {
+        platesTextField.text = ""
+        cylinderTextField.text = ""
     }
+
 }

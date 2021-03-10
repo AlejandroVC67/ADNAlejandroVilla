@@ -12,7 +12,7 @@ class ParkingCheckerTests: XCTestCase {
     func testCanPark_givenMaxNumberOfParkedCars_shouldReturnNoCarAvailabilityError() {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 20, bikesAmount: 0)
-        let newVehicle = Vehicle(plates: "abc123", brand: "test", type: .car, cylinder: 0, startDate: Date())
+        let newVehicle = Vehicle(plates: "abc123", type: .car, cylinder: 0, startDate: Date())
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -29,7 +29,7 @@ class ParkingCheckerTests: XCTestCase {
     func testCanPark_givenMaxNumberOfParkedBikes_shouldReturnNoBikeAvailabilityError() {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 10)
-        let newVehicle = Vehicle(plates: "abc123", brand: "test", type: .bike, cylinder: 0, startDate: Date())
+        let newVehicle = Vehicle(plates: "abc123", type: .bike, cylinder: 0, startDate: Date())
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -46,7 +46,7 @@ class ParkingCheckerTests: XCTestCase {
     func testCanPark_givenVehicleWithSamePlatesAsParkedVehicle_shouldReturnDuplicatePlatesError() {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 3)
-        let newVehicle = Vehicle(plates: "car4", brand: "test", type: .bike, cylinder: 0, startDate: Date())
+        let newVehicle = Vehicle(plates: "car4", type: .bike, cylinder: 0, startDate: Date())
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -64,7 +64,7 @@ class ParkingCheckerTests: XCTestCase {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 3)
         let date = Date(timeIntervalSince1970: 1615381200) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
-        let newVehicle = Vehicle(plates: "Abc40", brand: "test", type: .bike, cylinder: 0, startDate: date)
+        let newVehicle = Vehicle(plates: "Abc40", type: .bike, cylinder: 0, startDate: date)
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -82,7 +82,7 @@ class ParkingCheckerTests: XCTestCase {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 3)
         let date = Date(timeIntervalSince1970: 1615381200) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
-        let newVehicle = Vehicle(plates: "", brand: "test", type: .bike, cylinder: 0, startDate: date)
+        let newVehicle = Vehicle(plates: "", type: .bike, cylinder: 0, startDate: date)
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -100,7 +100,7 @@ class ParkingCheckerTests: XCTestCase {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 3)
         let date = Date(timeIntervalSince1970: 1615122000) // Sun Mar 07 2021 08:00:00 GMT-0500 (Colombia Standard Time)
-        let newVehicle = Vehicle(plates: "Abc41", brand: "test", type: .bike, cylinder: 0, startDate: date)
+        let newVehicle = Vehicle(plates: "Abc41", type: .bike, cylinder: 0, startDate: date)
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -119,7 +119,7 @@ class ParkingCheckerTests: XCTestCase {
         // Given
         let mockedVehicles = createVehiclesMock(carsAmount: 5, bikesAmount: 3)
         let date = Date(timeIntervalSince1970: 1615208400) // Mon Mar 08 2021 08:00:00 GMT-0500 (Colombia Standard Time)
-        let newVehicle = Vehicle(plates: "Abc41", brand: "test", type: .car, cylinder: 0, startDate: date)
+        let newVehicle = Vehicle(plates: "Abc41", type: .car, cylinder: 0, startDate: date)
         
         // When
         let canPark = ParkingChecker.canPark(parkedVehicles: mockedVehicles, vehicle: newVehicle)
@@ -140,11 +140,11 @@ private extension ParkingCheckerTests {
         var mockedVehicles: [Vehicle] = []
         
         for index in 0...carsAmount {
-            mockedVehicles.append(Vehicle(plates: "car\(index)", brand: "test", type: .car, cylinder: 0, startDate: Date()))
+            mockedVehicles.append(Vehicle(plates: "car\(index)", type: .car, cylinder: 0, startDate: Date()))
         }
         
         for index in 0...bikesAmount {
-            mockedVehicles.append(Vehicle(plates: "bike\(index)", brand: "test", type: .bike, cylinder: 0, startDate: Date()))
+            mockedVehicles.append(Vehicle(plates: "bike\(index)", type: .bike, cylinder: 0, startDate: Date()))
         }
         
         return mockedVehicles

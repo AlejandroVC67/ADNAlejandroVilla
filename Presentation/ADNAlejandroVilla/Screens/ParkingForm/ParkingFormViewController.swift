@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Domain
 
 class ParkingFormViewController: UIViewController {
     
@@ -21,10 +22,12 @@ class ParkingFormViewController: UIViewController {
         setupFormView()
     }
     
+    private var viewModel = ParkingFormViewModel(parkingHandler: ParkingManager.self)
+    
     private func setupFormView() {
         view.addSubview(formView)
         
-        formView.setupView(delegate: self)
+        formView.setupView(formUIDelegate: self, formLogicDelegate: viewModel)
         formView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         formView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         formView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
@@ -32,7 +35,8 @@ class ParkingFormViewController: UIViewController {
     }
 }
 
-extension ParkingFormViewController: UITextFieldDelegate {
+extension ParkingFormViewController: FormUIDelegate {
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         guard let textFieldText = textField.text,
@@ -46,6 +50,10 @@ extension ParkingFormViewController: UITextFieldDelegate {
             formView.parkInButton.isEnabled = shouldEnableButton
         }
         return count <= 6
+    }
+    
+    func checkParkedVehicles() {
+        print("pushing to anothe vc")
     }
     
 }

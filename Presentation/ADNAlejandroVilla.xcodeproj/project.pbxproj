@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BC9E810725F8381000858302 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810625F8381000858302 /* FormView.swift */; };
 		BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */; };
+		BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */; };
 		BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9C25F03E21005F403A /* AppDelegate.swift */; };
 		BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9E25F03E22005F403A /* SceneDelegate.swift */; };
 		BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		BC9E810625F8381000858302 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
+		BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormViewModel.swift; sourceTree = "<group>"; };
 		BCADBC9925F03E21005F403A /* ADNAlejandroVilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADNAlejandroVilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBC9C25F03E21005F403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCADBC9E25F03E22005F403A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */,
 				BC9E810625F8381000858302 /* FormView.swift */,
+				BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */,
 			);
 			path = ParkingForm;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
 				BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
+				BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

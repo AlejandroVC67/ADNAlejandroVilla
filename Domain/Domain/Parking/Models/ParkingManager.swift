@@ -7,17 +7,17 @@
 
 import Foundation
 
-class Parking: ParkingRepository {
+public class ParkingManager: ParkingRepository {
     /**
      Temporal Object, will use Realm in the future
      */
-    static var vehicles: [Vehicle] = []
+    public static var vehicles: [Vehicle] = []
     
-    static func getAllVehicles() -> [Vehicle] {
+    public static func getAllVehicles() -> [Vehicle] {
         return vehicles
     }
     
-    static func add(vehicle: Vehicle) { /*Do I need a Result<Bool, ParkingError> here too?*/
+    public static func add(vehicle: Vehicle) throws {
         let isParkeable = ParkingChecker.canPark(parkedVehicles: vehicles, vehicle: vehicle)
         switch isParkeable {
         case .success:
@@ -25,10 +25,11 @@ class Parking: ParkingRepository {
         case .failure(let error):
             // Return error
             print(error)
+            throw error
         }
     }
     
-    static func remove(vehicle: Vehicle) -> Double {
+    public static func remove(vehicle: Vehicle) -> Double {
         let price = ParkingDebtCollector(vehicle: vehicle).calculateCheckout()
         vehicles.removeAll(where: { $0 == vehicle })
         return price

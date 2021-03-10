@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ParkingError: Error {
+public enum ParkingError: Error {
     case noCarAvailability
     case noBikeAvailability
     case unableToEnter

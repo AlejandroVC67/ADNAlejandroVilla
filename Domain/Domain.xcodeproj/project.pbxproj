@@ -12,7 +12,7 @@
 		BCC2E04C25F6D4D100D2C8E0 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */; };
 		BCC2E05025F6D51800D2C8E0 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */; };
 		BCC2E05425F6D56300D2C8E0 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */; };
-		BCC2E06225F6D91500D2C8E0 /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06125F6D91500D2C8E0 /* Parking.swift */; };
+		BCC2E06225F6D91500D2C8E0 /* ParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */; };
 		BCC2E06625F6D93800D2C8E0 /* ParkingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */; };
 		BCC2E06C25F6DFE400D2C8E0 /* ParkingChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */; };
 		BCC2E07225F6E12C00D2C8E0 /* ParkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */; };
@@ -42,7 +42,7 @@
 		BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		BCC2E06125F6D91500D2C8E0 /* Parking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
+		BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingManager.swift; sourceTree = "<group>"; };
 		BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingRepository.swift; sourceTree = "<group>"; };
 		BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingChecker.swift; sourceTree = "<group>"; };
 		BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingError.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 		BCC2E0A725F81A7500D2C8E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCC2E06125F6D91500D2C8E0 /* Parking.swift */,
+				BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */,
 				BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */,
 			);
 			path = Models;
@@ -317,7 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC2E06225F6D91500D2C8E0 /* Parking.swift in Sources */,
+				BCC2E06225F6D91500D2C8E0 /* ParkingManager.swift in Sources */,
 				BCC2E06625F6D93800D2C8E0 /* ParkingRepository.swift in Sources */,
 				BCC2E07725F6E4D000D2C8E0 /* WeekDay.swift in Sources */,
 				BCC2E06C25F6DFE400D2C8E0 /* ParkingChecker.swift in Sources */,
