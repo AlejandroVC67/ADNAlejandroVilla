@@ -22,7 +22,6 @@ class ParkingFormViewModel {
     }
 }
 
-
 extension ParkingFormViewModel: FormLogicDelegate {
     func handleParkIn(for vehicle: Vehicle) {
         let didPark = parkingManager.add(vehicle: vehicle)
@@ -31,5 +30,4 @@ extension ParkingFormViewModel: FormLogicDelegate {
         case .failure(let error): delegate?.showAlert(with: error.errorDescription)
         }
     }
-    
 }

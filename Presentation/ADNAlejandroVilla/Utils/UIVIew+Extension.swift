@@ -14,3 +14,19 @@ extension UIView {
         }
     }
 }
+
+
+extension UITableViewCell {
+    static var reuseIdentifier: String {
+        String(describing: self)
+    }
+}
+
+
+extension Date {
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm E, d MMM y"
+        return formatter.string(from: self)
+    }
+}

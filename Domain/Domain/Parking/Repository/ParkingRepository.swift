@@ -12,5 +12,5 @@ public protocol ParkingRepository {
     
     static func getAllVehicles() -> [Vehicle]
     static func add(vehicle: Vehicle) -> Result<String, ParkingError>
-    static func remove(vehicle: Vehicle) -> Double
+    static func exitVehicle(plates: String) -> Double
 }

@@ -28,9 +28,13 @@ public class ParkingManager: ParkingRepository {
         }
     }
     
-    public static func remove(vehicle: Vehicle) -> Double {
+    public static func exitVehicle(plates: String) -> Double {
+        guard let vehicle = vehicles.first(where: { $0.plates == plates }) else {
+            return 0
+        }
+        
         let price = ParkingDebtCollector(vehicle: vehicle).calculateCheckout()
-        vehicles.removeAll(where: { $0 == vehicle })
+        vehicles.removeAll(where: { $0.plates == vehicle.plates })
         return price
     }
 }

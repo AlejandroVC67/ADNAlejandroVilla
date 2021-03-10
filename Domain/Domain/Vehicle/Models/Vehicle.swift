@@ -9,12 +9,12 @@ import Foundation
 
 public struct Vehicle: Identifiable, Billable {
     // MARK: - Identifiable
-    let plates: String
-    let type: VehicleType
-    let cylinder: Int
+    public let plates: String
+    public let type: VehicleType
+    public let cylinder: Int
     
     //MARK: - Billable
-    let startDate: Date
+    public let startDate: Date
     
     public init(plates: String, type: VehicleType, cylinder: Int) {
         self.plates = plates
@@ -28,11 +28,5 @@ public struct Vehicle: Identifiable, Billable {
         self.type = type
         self.cylinder = cylinder
         self.startDate = startDate
-    }
-}
-
-public extension Vehicle {
-    static func ==(lhs: Vehicle, rhs: Vehicle) -> Bool {
-        return lhs.plates == rhs.plates
     }
 }

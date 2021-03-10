@@ -66,7 +66,9 @@ extension ParkingFormViewController: FormUIDelegate {
     }
     
     func checkParkedVehicles() {
-        print("pushing to anothe vc")
+        let viewModel = ParkingListViewModel(parkingHandler: ParkingManager.self)
+        let vc = ParkingListTableViewController(viewModel: viewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

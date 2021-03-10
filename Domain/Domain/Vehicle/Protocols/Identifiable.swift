@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Identifiable: Equatable {
+protocol Identifiable {
     var plates: String { get }
     var type: VehicleType { get }
     var cylinder: Int { get }

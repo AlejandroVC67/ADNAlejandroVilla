@@ -11,7 +11,7 @@ protocol ParkingCheckerProtocol {
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError>
     static func checkAvailability(parkedVehicles: [Vehicle], type: VehicleType) -> Result<Bool, ParkingError>
     static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError>
-    static func checkPlatesDuplication(parkedVehicles: [Vehicle], Vehicle: Vehicle) -> Result<Bool, ParkingError>
+    static func checkPlatesDuplication(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError>
 }
 
 class ParkingChecker: ParkingCheckerProtocol {
@@ -22,7 +22,7 @@ class ParkingChecker: ParkingCheckerProtocol {
     }
     
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
-        let vehicleAlreadyParked = checkPlatesDuplication(parkedVehicles: parkedVehicles, Vehicle: vehicle)
+        let vehicleAlreadyParked = checkPlatesDuplication(parkedVehicles: parkedVehicles, vehicle: vehicle)
         let isAParkingAvailable = checkAvailability(parkedVehicles: parkedVehicles, type: vehicle.type)
         let platesValidation = checkPlates(vehicle: vehicle)
         
@@ -72,8 +72,8 @@ class ParkingChecker: ParkingCheckerProtocol {
         return .success(true)
     }
     
-    static func checkPlatesDuplication(parkedVehicles: [Vehicle], Vehicle: Vehicle) -> Result<Bool, ParkingError> {
-        return parkedVehicles.contains(where: { $0 == Vehicle }) ? .failure(.duplicatePlates) : .success(true)
+    static func checkPlatesDuplication(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
+        return parkedVehicles.contains(where: { $0.plates == vehicle.plates }) ? .failure(.duplicatePlates) : .success(true)
     }
     
     private static func check(validation: Result<Bool, ParkingError>) -> Bool? {

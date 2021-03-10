@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC21220D25F93A7B00389A4E /* ParkingListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21220C25F93A7B00389A4E /* ParkingListViewCell.swift */; };
+		BC21221125F958D700389A4E /* ParkingListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21221025F958D700389A4E /* ParkingListCellViewModel.swift */; };
 		BC9E810725F8381000858302 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810625F8381000858302 /* FormView.swift */; };
 		BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */; };
 		BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */; };
+		BC9E811625F9339A00858302 /* ParkingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E811525F9339A00858302 /* ParkingListTableViewController.swift */; };
+		BC9E812125F934DE00858302 /* ParkingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E812025F934DE00858302 /* ParkingListViewModel.swift */; };
 		BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9C25F03E21005F403A /* AppDelegate.swift */; };
 		BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9E25F03E22005F403A /* SceneDelegate.swift */; };
 		BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */; };
@@ -53,9 +57,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC21220C25F93A7B00389A4E /* ParkingListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListViewCell.swift; sourceTree = "<group>"; };
+		BC21221025F958D700389A4E /* ParkingListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListCellViewModel.swift; sourceTree = "<group>"; };
 		BC9E810625F8381000858302 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormViewModel.swift; sourceTree = "<group>"; };
+		BC9E811525F9339A00858302 /* ParkingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListTableViewController.swift; sourceTree = "<group>"; };
+		BC9E812025F934DE00858302 /* ParkingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListViewModel.swift; sourceTree = "<group>"; };
 		BCADBC9925F03E21005F403A /* ADNAlejandroVilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADNAlejandroVilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBC9C25F03E21005F403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCADBC9E25F03E22005F403A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 		BC9E80FE25F8361F00858302 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E811925F933BA00858302 /* ParkingList */,
 				BC9E810325F8370100858302 /* ParkingForm */,
 			);
 			path = Screens;
@@ -130,6 +139,17 @@
 				BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC9E811925F933BA00858302 /* ParkingList */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E811525F9339A00858302 /* ParkingListTableViewController.swift */,
+				BC9E812025F934DE00858302 /* ParkingListViewModel.swift */,
+				BC21220C25F93A7B00389A4E /* ParkingListViewCell.swift */,
+				BC21221025F958D700389A4E /* ParkingListCellViewModel.swift */,
+			);
+			path = ParkingList;
 			sourceTree = "<group>";
 		};
 		BCADBC9025F03E21005F403A = {
@@ -324,7 +344,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9E810725F8381000858302 /* FormView.swift in Sources */,
+				BC21220D25F93A7B00389A4E /* ParkingListViewCell.swift in Sources */,
+				BC9E812125F934DE00858302 /* ParkingListViewModel.swift in Sources */,
+				BC21221125F958D700389A4E /* ParkingListCellViewModel.swift in Sources */,
 				BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */,
+				BC9E811625F9339A00858302 /* ParkingListTableViewController.swift in Sources */,
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
 				BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
