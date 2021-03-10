@@ -11,6 +11,6 @@ public protocol ParkingRepository {
     static var vehicles: [Vehicle] { get set }
     
     static func getAllVehicles() -> [Vehicle]
-    static func add(vehicle: Vehicle) throws //-> Result<Bool, ParkingError>
+    static func add(vehicle: Vehicle) -> Result<String, ParkingError>
     static func remove(vehicle: Vehicle) -> Double
 }

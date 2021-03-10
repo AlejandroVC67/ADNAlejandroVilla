@@ -17,15 +17,14 @@ public class ParkingManager: ParkingRepository {
         return vehicles
     }
     
-    public static func add(vehicle: Vehicle) throws {
+    public static func add(vehicle: Vehicle) -> Result<String, ParkingError> {
         let isParkeable = ParkingChecker.canPark(parkedVehicles: vehicles, vehicle: vehicle)
         switch isParkeable {
         case .success:
             vehicles.append(vehicle)
+            return .success("Successfully added vehicle")
         case .failure(let error):
-            // Return error
-            print(error)
-            throw error
+            return .failure(error)
         }
     }
     
