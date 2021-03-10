@@ -7,6 +7,16 @@
 
 import Foundation
 
-enum VehicleType {
+public enum VehicleType: String, CaseIterable {
     case car, bike
+    
+    public static func toString() -> [String] {
+        var types: [String] = []
+        
+        VehicleType.allCases.forEach {
+            types.append($0.rawValue)
+        }
+        
+        return types
+    }
 }
