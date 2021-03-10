@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC9E810725F8381000858302 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810625F8381000858302 /* FormView.swift */; };
+		BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */; };
 		BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9C25F03E21005F403A /* AppDelegate.swift */; };
 		BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBC9E25F03E22005F403A /* SceneDelegate.swift */; };
-		BCADBCA125F03E22005F403A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCA025F03E22005F403A /* ViewController.swift */; };
-		BCADBCA425F03E22005F403A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCADBCA225F03E22005F403A /* Main.storyboard */; };
+		BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */; };
 		BCADBCA625F03E25005F403A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCADBCA525F03E25005F403A /* Assets.xcassets */; };
 		BCADBCA925F03E25005F403A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */; };
 		BCADBCB425F03E26005F403A /* ADNAlejandroVillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCB325F03E26005F403A /* ADNAlejandroVillaTests.swift */; };
@@ -51,11 +52,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BC9E810625F8381000858302 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		BCADBC9925F03E21005F403A /* ADNAlejandroVilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADNAlejandroVilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCADBC9C25F03E21005F403A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCADBC9E25F03E22005F403A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCADBCA025F03E22005F403A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BCADBCA325F03E22005F403A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormViewController.swift; sourceTree = "<group>"; };
 		BCADBCA525F03E25005F403A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCADBCA825F03E25005F403A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCADBCAA25F03E25005F403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC9E80FD25F835F700858302 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BC9E80FE25F8361F00858302 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E810325F8370100858302 /* ParkingForm */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BC9E810325F8370100858302 /* ParkingForm */ = {
+			isa = PBXGroup;
+			children = (
+				BCADBCA025F03E22005F403A /* ParkingFormViewController.swift */,
+				BC9E810625F8381000858302 /* FormView.swift */,
+			);
+			path = ParkingForm;
+			sourceTree = "<group>";
+		};
+		BC9E810A25F8F21D00858302 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BCADBC9025F03E21005F403A = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +153,12 @@
 		BCADBC9B25F03E21005F403A /* ADNAlejandroVilla */ = {
 			isa = PBXGroup;
 			children = (
+				BC9E810A25F8F21D00858302 /* Utils */,
+				BC9E80FE25F8361F00858302 /* Screens */,
+				BCADBCA525F03E25005F403A /* Assets.xcassets */,
+				BC9E80FD25F835F700858302 /* Storyboards */,
 				BCADBC9C25F03E21005F403A /* AppDelegate.swift */,
 				BCADBC9E25F03E22005F403A /* SceneDelegate.swift */,
-				BCADBCA025F03E22005F403A /* ViewController.swift */,
-				BCADBCA225F03E22005F403A /* Main.storyboard */,
-				BCADBCA525F03E25005F403A /* Assets.xcassets */,
-				BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */,
 				BCADBCAA25F03E25005F403A /* Info.plist */,
 			);
 			path = ADNAlejandroVilla;
@@ -261,7 +296,6 @@
 			files = (
 				BCADBCA925F03E25005F403A /* LaunchScreen.storyboard in Resources */,
 				BCADBCA625F03E25005F403A /* Assets.xcassets in Resources */,
-				BCADBCA425F03E22005F403A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCADBCA125F03E22005F403A /* ViewController.swift in Sources */,
+				BC9E810725F8381000858302 /* FormView.swift in Sources */,
+				BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */,
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
+				BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,14 +360,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BCADBCA225F03E22005F403A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCADBCA325F03E22005F403A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
