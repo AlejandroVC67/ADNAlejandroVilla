@@ -10,11 +10,11 @@ import Domain
 
 
 class ParkingListViewModel: NSObject {
-    private var parkingManager: ParkingRepository.Type
+    private var parkingManager: ParkingManager
     private var vehicles: [Vehicle] = []
     weak var delegate: ParkingListDelegate?
     
-    init(parkingHandler: ParkingRepository.Type) {
+    init(parkingHandler: ParkingManager) {
         self.parkingManager = parkingHandler
         super.init()
         updateData()

@@ -7,6 +7,7 @@
 
 import UIKit
 import Domain
+import DataAccess
 
 class ParkingFormViewController: UIViewController {
     
@@ -21,17 +22,23 @@ class ParkingFormViewController: UIViewController {
         return view
     }()
     
-    private var viewModel = ParkingFormViewModel(parkingHandler: ParkingManager.self)
+    private var persistence = RealmPersistence()
+    private var viewModel: ParkingFormViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        viewModel.delegate = self
+        viewModel = ParkingFormViewModel(parkingHandler: ParkingManager(persistence: persistence))
+        viewModel?.delegate = self
         setupFormView()
     }
     
     private func setupFormView() {
         view.addSubview(formView)
+        
+        guard let viewModel = viewModel else {
+            return
+        }
         
         formView.setupView(formUIDelegate: self, formLogicDelegate: viewModel)
         formView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -66,7 +73,7 @@ extension ParkingFormViewController: FormUIDelegate {
     }
     
     func checkParkedVehicles() {
-        let viewModel = ParkingListViewModel(parkingHandler: ParkingManager.self)
+        let viewModel = ParkingListViewModel(parkingHandler: ParkingManager(persistence: persistence))
         let vc = ParkingListTableViewController(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -8,9 +8,7 @@
 import Foundation
 
 public protocol ParkingRepository {
-    static var vehicles: [Vehicle] { get set }
-    
-    static func getAllVehicles() -> [Vehicle]
-    static func add(vehicle: Vehicle) -> Result<String, ParkingError>
-    static func exitVehicle(plates: String) -> Double
+    func getAllVehicles() -> [Vehicle]
+    func add(vehicle: Vehicle)
+    func exitVehicle(plates: String)
 }

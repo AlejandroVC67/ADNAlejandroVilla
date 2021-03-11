@@ -23,7 +23,7 @@ public struct Vehicle: Identifiable, Billable {
         self.startDate = Date()
     }
     
-    internal init(plates: String, type: VehicleType, cylinder: Int, startDate: Date) {
+    public init(plates: String, type: VehicleType, cylinder: Int, startDate: Date) {
         self.plates = plates
         self.type = type
         self.cylinder = cylinder

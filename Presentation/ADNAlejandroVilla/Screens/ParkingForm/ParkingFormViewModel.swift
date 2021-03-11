@@ -14,10 +14,10 @@ protocol ParkingFormViewModelDelegate: class {
 
 class ParkingFormViewModel {
     
-    private var parkingManager: ParkingRepository.Type
+    private var parkingManager: ParkingManager
     weak var delegate: ParkingFormViewModelDelegate?
     
-    init(parkingHandler: ParkingRepository.Type) {
+    init(parkingHandler: ParkingManager) {
         self.parkingManager = parkingHandler
     }
 }
