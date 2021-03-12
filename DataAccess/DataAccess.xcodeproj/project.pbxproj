@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BC00455025FA8C20002AA0A3 /* DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC00454625FA8C1F002AA0A3 /* DataAccess.framework */; };
-		BC00455525FA8C20002AA0A3 /* DataAccessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00455425FA8C20002AA0A3 /* DataAccessTests.swift */; };
 		BC00455725FA8C20002AA0A3 /* DataAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = BC00454925FA8C1F002AA0A3 /* DataAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BC00457225FA8D02002AA0A3 /* VehicleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00457125FA8D02002AA0A3 /* VehicleEntity.swift */; };
 		BC00457625FA8E4C002AA0A3 /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC00456525FA8C75002AA0A3 /* Realm.xcframework */; };
@@ -19,6 +18,7 @@
 		BC00457F25FA8FFD002AA0A3 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC00457D25FA8FFD002AA0A3 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC00458225FA9044002AA0A3 /* RealmPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00458125FA9044002AA0A3 /* RealmPersistence.swift */; };
 		BC26647825FBC763001D1E7D /* EntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647725FBC763001D1E7D /* EntityParser.swift */; };
+		BC26649725FBD8AB001D1E7D /* EntityParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,6 @@
 		BC00454925FA8C1F002AA0A3 /* DataAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataAccess.h; sourceTree = "<group>"; };
 		BC00454A25FA8C1F002AA0A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC00454F25FA8C20002AA0A3 /* DataAccessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataAccessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC00455425FA8C20002AA0A3 /* DataAccessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAccessTests.swift; sourceTree = "<group>"; };
 		BC00455625FA8C20002AA0A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC00456525FA8C75002AA0A3 /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = ../Carthage/Build/Realm.xcframework; sourceTree = "<group>"; };
 		BC00456A25FA8C78002AA0A3 /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = ../Carthage/Build/RealmSwift.xcframework; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		BC00457D25FA8FFD002AA0A3 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC00458125FA9044002AA0A3 /* RealmPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistence.swift; sourceTree = "<group>"; };
 		BC26647725FBC763001D1E7D /* EntityParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityParser.swift; sourceTree = "<group>"; };
+		BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,8 @@
 		BC00455325FA8C20002AA0A3 /* DataAccessTests */ = {
 			isa = PBXGroup;
 			children = (
-				BC00455425FA8C20002AA0A3 /* DataAccessTests.swift */,
 				BC00455625FA8C20002AA0A3 /* Info.plist */,
+				BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */,
 			);
 			path = DataAccessTests;
 			sourceTree = "<group>";
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC00455525FA8C20002AA0A3 /* DataAccessTests.swift in Sources */,
+				BC26649725FBD8AB001D1E7D /* EntityParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +472,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DataAccessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -490,6 +491,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DataAccessTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
