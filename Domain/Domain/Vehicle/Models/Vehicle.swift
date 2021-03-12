@@ -15,15 +15,8 @@ public struct Vehicle: Identifiable, Billable {
     
     //MARK: - Billable
     public let startDate: Date
-    
-    public init(plates: String, type: VehicleType, cylinder: Int) {
-        self.plates = plates
-        self.type = type
-        self.cylinder = cylinder
-        self.startDate = Date()
-    }
-    
-    public init(plates: String, type: VehicleType, cylinder: Int, startDate: Date) {
+        
+    public init(plates: String, type: VehicleType, cylinder: Int, startDate: Date = Date()) {
         self.plates = plates
         self.type = type
         self.cylinder = cylinder
