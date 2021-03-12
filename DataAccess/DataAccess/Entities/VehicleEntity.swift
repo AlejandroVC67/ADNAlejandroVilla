@@ -17,24 +17,4 @@ class VehicleEntity: Object {
     
     //MARK: - Billable
     @objc dynamic public var startDate: Date = Date()
-    
-//    init(plates: String, type: String, cylinder: Int, date: Date) {
-//        self.plates = plates
-//        self.type = type
-//        self.cylinder = cylinder
-//        self.startDate = date
-//    }
-}
-
-extension Results where Element : VehicleEntity {
-    func transform() -> [Vehicle] {
-        return self.map { (entity) -> Vehicle in
-            let type = VehicleType(rawValue: entity.type) ?? .car
-            
-            return Vehicle(plates: entity.plates,
-                           type: type,
-                           cylinder: entity.cylinder,
-                           startDate: entity.startDate)
-        }
-    }
 }
