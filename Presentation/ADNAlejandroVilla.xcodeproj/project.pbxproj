@@ -11,6 +11,8 @@
 		BC21221125F958D700389A4E /* ParkingListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC21221025F958D700389A4E /* ParkingListCellViewModel.swift */; };
 		BC26646D25FA99DE001D1E7D /* DataAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC26646C25FA99DE001D1E7D /* DataAccess.framework */; };
 		BC26646E25FA99DE001D1E7D /* DataAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC26646C25FA99DE001D1E7D /* DataAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC26647C25FBC910001D1E7D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647B25FBC910001D1E7D /* Date+Extension.swift */; };
+		BC26648025FBC927001D1E7D /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */; };
 		BC9E810725F8381000858302 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810625F8381000858302 /* FormView.swift */; };
 		BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */; };
 		BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */; };
@@ -63,6 +65,8 @@
 		BC21220C25F93A7B00389A4E /* ParkingListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListViewCell.swift; sourceTree = "<group>"; };
 		BC21221025F958D700389A4E /* ParkingListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListCellViewModel.swift; sourceTree = "<group>"; };
 		BC26646C25FA99DE001D1E7D /* DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC26647B25FBC910001D1E7D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		BC9E810625F8381000858302 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormViewModel.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */,
+				BC26647B25FBC910001D1E7D /* Date+Extension.swift */,
+				BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -350,11 +356,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9E810725F8381000858302 /* FormView.swift in Sources */,
+				BC26647C25FBC910001D1E7D /* Date+Extension.swift in Sources */,
 				BC21220D25F93A7B00389A4E /* ParkingListViewCell.swift in Sources */,
 				BC9E812125F934DE00858302 /* ParkingListViewModel.swift in Sources */,
 				BC21221125F958D700389A4E /* ParkingListCellViewModel.swift in Sources */,
 				BCADBCA125F03E22005F403A /* ParkingFormViewController.swift in Sources */,
 				BC9E811625F9339A00858302 /* ParkingListTableViewController.swift in Sources */,
+				BC26648025FBC927001D1E7D /* UITableViewCell+Extension.swift in Sources */,
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
 				BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
