@@ -22,13 +22,21 @@ class ParkingFormViewController: UIViewController {
         return view
     }()
     
-    private var persistence = RealmPersistence()
+    private lazy var manager: ParkingManager = {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+              let manager = appDelegate.container.getContainer().resolve(ParkingManager.self) else {
+            return ParkingManager(persistence: RealmPersistence())
+        }
+        
+        return manager
+    }()
+    
     private var viewModel: ParkingFormViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        viewModel = ParkingFormViewModel(parkingHandler: ParkingManager(persistence: persistence))
+        viewModel = ParkingFormViewModel(parkingHandler: manager)
         viewModel?.delegate = self
         setupFormView()
     }
@@ -73,7 +81,7 @@ extension ParkingFormViewController: FormUIDelegate {
     }
     
     func checkParkedVehicles() {
-        let viewModel = ParkingListViewModel(parkingHandler: ParkingManager(persistence: persistence))
+        let viewModel = ParkingListViewModel(parkingHandler: manager)
         let vc = ParkingListTableViewController(viewModel: viewModel)
         navigationController?.pushViewController(vc, animated: true)
     }

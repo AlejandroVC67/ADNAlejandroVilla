@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		BC26646E25FA99DE001D1E7D /* DataAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC26646C25FA99DE001D1E7D /* DataAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC26647C25FBC910001D1E7D /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647B25FBC910001D1E7D /* Date+Extension.swift */; };
 		BC26648025FBC927001D1E7D /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */; };
+		BC26648425FBCC19001D1E7D /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26648325FBCC19001D1E7D /* DIContainer.swift */; };
+		BC26648B25FBCC6E001D1E7D /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC26648925FBCC6E001D1E7D /* Realm.xcframework */; };
+		BC26648C25FBCC6E001D1E7D /* Realm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC26648925FBCC6E001D1E7D /* Realm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC26648D25FBCC6E001D1E7D /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC26648A25FBCC6E001D1E7D /* RealmSwift.xcframework */; };
+		BC26648E25FBCC6E001D1E7D /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC26648A25FBCC6E001D1E7D /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BC26649225FBCC81001D1E7D /* Swinject.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC26649125FBCC81001D1E7D /* Swinject.xcframework */; };
+		BC26649325FBCC81001D1E7D /* Swinject.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC26649125FBCC81001D1E7D /* Swinject.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC9E810725F8381000858302 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810625F8381000858302 /* FormView.swift */; };
 		BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */; };
 		BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */; };
@@ -55,6 +62,9 @@
 			files = (
 				BC26646E25FA99DE001D1E7D /* DataAccess.framework in Embed Frameworks */,
 				BCC2E04125F6C02F00D2C8E0 /* Domain.framework in Embed Frameworks */,
+				BC26649325FBCC81001D1E7D /* Swinject.xcframework in Embed Frameworks */,
+				BC26648C25FBCC6E001D1E7D /* Realm.xcframework in Embed Frameworks */,
+				BC26648E25FBCC6E001D1E7D /* RealmSwift.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +77,10 @@
 		BC26646C25FA99DE001D1E7D /* DataAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC26647B25FBC910001D1E7D /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		BC26648325FBCC19001D1E7D /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		BC26648925FBCC6E001D1E7D /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Realm.xcframework; path = /Users/alejandro.villa/Documents/Ceiba/ADNAlejandroVilla/DataAccess/../Carthage/Build/Realm.xcframework; sourceTree = "<absolute>"; };
+		BC26648A25FBCC6E001D1E7D /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = /Users/alejandro.villa/Documents/Ceiba/ADNAlejandroVilla/DataAccess/../Carthage/Build/RealmSwift.xcframework; sourceTree = "<absolute>"; };
+		BC26649125FBCC81001D1E7D /* Swinject.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Swinject.xcframework; path = ../Carthage/Build/Swinject.xcframework; sourceTree = "<group>"; };
 		BC9E810625F8381000858302 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 		BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extension.swift"; sourceTree = "<group>"; };
 		BC9E810F25F91A0000858302 /* ParkingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +109,9 @@
 			files = (
 				BC26646D25FA99DE001D1E7D /* DataAccess.framework in Frameworks */,
 				BCC2E04025F6C02F00D2C8E0 /* Domain.framework in Frameworks */,
+				BC26649225FBCC81001D1E7D /* Swinject.xcframework in Frameworks */,
+				BC26648B25FBCC6E001D1E7D /* Realm.xcframework in Frameworks */,
+				BC26648D25FBCC6E001D1E7D /* RealmSwift.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +211,7 @@
 				BCADBC9C25F03E21005F403A /* AppDelegate.swift */,
 				BCADBC9E25F03E22005F403A /* SceneDelegate.swift */,
 				BCADBCAA25F03E25005F403A /* Info.plist */,
+				BC26648325FBCC19001D1E7D /* DIContainer.swift */,
 			);
 			path = ADNAlejandroVilla;
 			sourceTree = "<group>";
@@ -219,6 +237,9 @@
 		BCC2E03E25F6C02F00D2C8E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC26649125FBCC81001D1E7D /* Swinject.xcframework */,
+				BC26648925FBCC6E001D1E7D /* Realm.xcframework */,
+				BC26648A25FBCC6E001D1E7D /* RealmSwift.xcframework */,
 				BC26646C25FA99DE001D1E7D /* DataAccess.framework */,
 				BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */,
 			);
@@ -365,6 +386,7 @@
 				BC26648025FBC927001D1E7D /* UITableViewCell+Extension.swift in Sources */,
 				BCADBC9D25F03E21005F403A /* AppDelegate.swift in Sources */,
 				BC9E810C25F8F24D00858302 /* UIVIew+Extension.swift in Sources */,
+				BC26648425FBCC19001D1E7D /* DIContainer.swift in Sources */,
 				BCADBC9F25F03E22005F403A /* SceneDelegate.swift in Sources */,
 				BC9E811025F91A0000858302 /* ParkingFormViewModel.swift in Sources */,
 			);
