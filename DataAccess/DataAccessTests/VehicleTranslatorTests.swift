@@ -1,5 +1,5 @@
 //
-//  EntityParserTests.swift
+//  VehicleTranslatorTests.swift
 //  DataAccessTests
 //
 //  Created by Alejandro Villa Cardenas - Ceiba Software on 12/03/21.
@@ -10,14 +10,14 @@ import Domain
 import RealmSwift
 @testable import DataAccess
 
-class EntityParserTests: XCTestCase {
+class VehicleTranslatorTests: XCTestCase {
     
     func testTransformIntoEntity_givenVehicle_shouldReturnVehicleEntity() {
         // Given
         let vehicle = Vehicle(plates: "test", type: .car, cylinder: 100, startDate: Date())
         
         // When
-        let entity = EntityParser.transformIntoEntity(vehicle: vehicle)
+        let entity = VehicleTrasnslator.transformIntoEntity(vehicle: vehicle)
         
         // Then
         XCTAssertEqual(entity.plates, vehicle.plates, "The value should be \(vehicle.plates)")

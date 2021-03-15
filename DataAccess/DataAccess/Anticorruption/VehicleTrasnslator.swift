@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 import Domain
 
-class EntityParser {
+class VehicleTrasnslator {
     static func transformIntoEntity(vehicle: Vehicle) -> VehicleEntity {
         let entity = VehicleEntity()
         entity.plates = vehicle.plates

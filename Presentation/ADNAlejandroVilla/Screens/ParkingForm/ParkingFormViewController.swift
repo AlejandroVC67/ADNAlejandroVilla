@@ -22,10 +22,10 @@ class ParkingFormViewController: UIViewController {
         return view
     }()
     
-    private lazy var manager: ParkingManager = {
+    private lazy var manager: ParkingService = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-              let manager = appDelegate.container.getContainer().resolve(ParkingManager.self) else {
-            return ParkingManager(persistence: RealmPersistence())
+              let manager = appDelegate.container.getContainer().resolve(ParkingService.self) else {
+            return ParkingService(persistence: RealmPersistence())
         }
         
         return manager

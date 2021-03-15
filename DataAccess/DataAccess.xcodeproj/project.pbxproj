@@ -17,8 +17,8 @@
 		BC00457E25FA8FFD002AA0A3 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC00457D25FA8FFD002AA0A3 /* Domain.framework */; };
 		BC00457F25FA8FFD002AA0A3 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC00457D25FA8FFD002AA0A3 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC00458225FA9044002AA0A3 /* RealmPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC00458125FA9044002AA0A3 /* RealmPersistence.swift */; };
-		BC26647825FBC763001D1E7D /* EntityParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647725FBC763001D1E7D /* EntityParser.swift */; };
-		BC26649725FBD8AB001D1E7D /* EntityParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */; };
+		BC26647825FBC763001D1E7D /* VehicleTrasnslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26647725FBC763001D1E7D /* VehicleTrasnslator.swift */; };
+		BC26649725FBD8AB001D1E7D /* VehicleTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26649625FBD8AB001D1E7D /* VehicleTranslatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +58,8 @@
 		BC00457125FA8D02002AA0A3 /* VehicleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleEntity.swift; sourceTree = "<group>"; };
 		BC00457D25FA8FFD002AA0A3 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC00458125FA9044002AA0A3 /* RealmPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPersistence.swift; sourceTree = "<group>"; };
-		BC26647725FBC763001D1E7D /* EntityParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityParser.swift; sourceTree = "<group>"; };
-		BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityParserTests.swift; sourceTree = "<group>"; };
+		BC26647725FBC763001D1E7D /* VehicleTrasnslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTrasnslator.swift; sourceTree = "<group>"; };
+		BC26649625FBD8AB001D1E7D /* VehicleTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTranslatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 		BC00454825FA8C1F002AA0A3 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
-				BC26647625FBC755001D1E7D /* Parsers */,
-				BC00458425FA9049002AA0A3 /* Persistence */,
+				BC26647625FBC755001D1E7D /* Anticorruption */,
+				BC00458425FA9049002AA0A3 /* Repository */,
 				BC00457025FA8CF9002AA0A3 /* Entities */,
 				BC00454925FA8C1F002AA0A3 /* DataAccess.h */,
 				BC00454A25FA8C1F002AA0A3 /* Info.plist */,
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				BC00455625FA8C20002AA0A3 /* Info.plist */,
-				BC26649625FBD8AB001D1E7D /* EntityParserTests.swift */,
+				BC26649625FBD8AB001D1E7D /* VehicleTranslatorTests.swift */,
 			);
 			path = DataAccessTests;
 			sourceTree = "<group>";
@@ -142,20 +142,20 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		BC00458425FA9049002AA0A3 /* Persistence */ = {
+		BC00458425FA9049002AA0A3 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				BC00458125FA9044002AA0A3 /* RealmPersistence.swift */,
 			);
-			path = Persistence;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		BC26647625FBC755001D1E7D /* Parsers */ = {
+		BC26647625FBC755001D1E7D /* Anticorruption */ = {
 			isa = PBXGroup;
 			children = (
-				BC26647725FBC763001D1E7D /* EntityParser.swift */,
+				BC26647725FBC763001D1E7D /* VehicleTrasnslator.swift */,
 			);
-			path = Parsers;
+			path = Anticorruption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC26647825FBC763001D1E7D /* EntityParser.swift in Sources */,
+				BC26647825FBC763001D1E7D /* VehicleTrasnslator.swift in Sources */,
 				BC00457225FA8D02002AA0A3 /* VehicleEntity.swift in Sources */,
 				BC00458225FA9044002AA0A3 /* RealmPersistence.swift in Sources */,
 			);
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC26649725FBD8AB001D1E7D /* EntityParserTests.swift in Sources */,
+				BC26649725FBD8AB001D1E7D /* VehicleTranslatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

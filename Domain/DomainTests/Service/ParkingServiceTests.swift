@@ -8,14 +8,14 @@
 import XCTest
 @testable import Domain
 
-class ParkingManagerTests: XCTestCase {
+class ParkingServiceTests: XCTestCase {
     
     func testInit_givenPersistence_shouldCreateManagerInstance() {
         // Given
         let mock = RepositoryMock()
         
         // When
-        let manager = ParkingManager(persistence: mock)
+        let manager = ParkingService(persistence: mock)
         
         // Then
         XCTAssertNotNil(manager, "Manager should not be nil")
@@ -24,7 +24,7 @@ class ParkingManagerTests: XCTestCase {
     func testAdd_givenVehicle_shouldReturnSuccess() {
         // Given
         let mock = RepositoryMock()
-        let manager = ParkingManager(persistence: mock)
+        let manager = ParkingService(persistence: mock)
         let vehicle = Vehicle(plates: "test", type: .car, cylinder: 100)
         
         // When
@@ -42,7 +42,7 @@ class ParkingManagerTests: XCTestCase {
     func testAdd_givenVehicleWithPlatesStartingWithAOnAWednesday_shouldReturnFailure() {
         // Given
         let mock = RepositoryMock()
-        let manager = ParkingManager(persistence: mock)
+        let manager = ParkingService(persistence: mock)
          
         let vehicle = Vehicle(plates: "ABC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
         
@@ -61,7 +61,7 @@ class ParkingManagerTests: XCTestCase {
     func testExitVehicle_givenVehiclePlates_shouldRemoveVehicle() {
         // Given
         let mock = RepositoryMock()
-        let manager = ParkingManager(persistence: mock)
+        let manager = ParkingService(persistence: mock)
          
         let vehicle = Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
         _ = manager.add(vehicle: vehicle)
@@ -76,7 +76,7 @@ class ParkingManagerTests: XCTestCase {
     func testExitVehicle_givenVehicleThatIsNotParked_shouldReturnZero() {
         // Given
         let mock = RepositoryMock()
-        let manager = ParkingManager(persistence: mock)
+        let manager = ParkingService(persistence: mock)
          
         let vehicle = Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
         

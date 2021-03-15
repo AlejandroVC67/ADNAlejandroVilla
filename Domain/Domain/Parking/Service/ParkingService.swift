@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class ParkingManager {
+public class ParkingService {
 
     private var persistence: ParkingRepository
     

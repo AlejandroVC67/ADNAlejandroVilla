@@ -22,12 +22,12 @@ public class RealmPersistence: ParkingRepository {
             return []
         }
         
-        let vehicles = EntityParser.transformIntoVehicles(entities: entities)
+        let vehicles = VehicleTrasnslator.transformIntoVehicles(entities: entities)
         return vehicles
     }
     
     public func add(vehicle: Vehicle) {
-        let entity = EntityParser.transformIntoEntity(vehicle: vehicle)
+        let entity = VehicleTrasnslator.transformIntoEntity(vehicle: vehicle)
         try? database?.write({
             database?.add(entity)
         })

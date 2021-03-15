@@ -14,10 +14,10 @@ protocol ParkingFormViewModelDelegate: class {
 
 class ParkingFormViewModel {
     
-    private var parkingManager: ParkingManager
+    private var parkingManager: ParkingService
     weak var delegate: ParkingFormViewModelDelegate?
     
-    init(parkingHandler: ParkingManager) {
+    init(parkingHandler: ParkingService) {
         self.parkingManager = parkingHandler
     }
 }

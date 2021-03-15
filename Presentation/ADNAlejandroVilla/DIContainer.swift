@@ -20,8 +20,8 @@ public class DIContainer {
             _ in RealmPersistence()
         }
         
-        container.register(ParkingManager.self) {
-            repository in ParkingManager(persistence: repository.resolve(ParkingRepository.self)!)
+        container.register(ParkingService.self) {
+            repository in ParkingService(persistence: repository.resolve(ParkingRepository.self)!)
         }
     }
     

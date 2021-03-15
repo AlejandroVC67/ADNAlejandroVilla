@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		BC26649D25FBE566001D1E7D /* VehicleTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26649C25FBE566001D1E7D /* VehicleTypeTests.swift */; };
 		BC2664A525FBEDBA001D1E7D /* ParkingErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2664A425FBEDBA001D1E7D /* ParkingErrorTests.swift */; };
-		BC2664A925FBEF98001D1E7D /* ParkingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2664A825FBEF98001D1E7D /* ParkingManagerTests.swift */; };
+		BC2664A925FBEF98001D1E7D /* ParkingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2664A825FBEF98001D1E7D /* ParkingServiceTests.swift */; };
 		BC2664AE25FBF067001D1E7D /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2664AD25FBF067001D1E7D /* RepositoryMock.swift */; };
 		BCC2E02A25F6C00600D2C8E0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2E02025F6C00600D2C8E0 /* Domain.framework */; };
 		BCC2E03125F6C00600D2C8E0 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = BCC2E02325F6C00600D2C8E0 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCC2E04C25F6D4D100D2C8E0 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */; };
 		BCC2E05025F6D51800D2C8E0 /* VehicleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */; };
 		BCC2E05425F6D56300D2C8E0 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */; };
-		BCC2E06225F6D91500D2C8E0 /* ParkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */; };
+		BCC2E06225F6D91500D2C8E0 /* ParkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06125F6D91500D2C8E0 /* ParkingService.swift */; };
 		BCC2E06625F6D93800D2C8E0 /* ParkingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */; };
 		BCC2E06C25F6DFE400D2C8E0 /* ParkingChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */; };
 		BCC2E07225F6E12C00D2C8E0 /* ParkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		BC26649C25FBE566001D1E7D /* VehicleTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTypeTests.swift; sourceTree = "<group>"; };
 		BC2664A425FBEDBA001D1E7D /* ParkingErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingErrorTests.swift; sourceTree = "<group>"; };
-		BC2664A825FBEF98001D1E7D /* ParkingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingManagerTests.swift; sourceTree = "<group>"; };
+		BC2664A825FBEF98001D1E7D /* ParkingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingServiceTests.swift; sourceTree = "<group>"; };
 		BC2664AD25FBF067001D1E7D /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		BCC2E02025F6C00600D2C8E0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC2E02325F6C00600D2C8E0 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		BCC2E04B25F6D4D100D2C8E0 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 		BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleType.swift; sourceTree = "<group>"; };
 		BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
-		BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingManager.swift; sourceTree = "<group>"; };
+		BCC2E06125F6D91500D2C8E0 /* ParkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingService.swift; sourceTree = "<group>"; };
 		BCC2E06525F6D93800D2C8E0 /* ParkingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingRepository.swift; sourceTree = "<group>"; };
 		BCC2E06B25F6DFE400D2C8E0 /* ParkingChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingChecker.swift; sourceTree = "<group>"; };
 		BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingError.swift; sourceTree = "<group>"; };
@@ -84,8 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				BC26649C25FBE566001D1E7D /* VehicleTypeTests.swift */,
-				BC2664A425FBEDBA001D1E7D /* ParkingErrorTests.swift */,
-				BC2664A825FBEF98001D1E7D /* ParkingManagerTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,6 +94,38 @@
 				BC2664AD25FBF067001D1E7D /* RepositoryMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BCBC0EE525FFFBF1006D480B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E06125F6D91500D2C8E0 /* ParkingService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BCBC0EE625FFFC05006D480B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BCBC0EEC26000124006D480B /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				BC2664A425FBEDBA001D1E7D /* ParkingErrorTests.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		BCBC0EED26000138006D480B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC2664A825FBEF98001D1E7D /* ParkingServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		BCC2E01625F6C00600D2C8E0 = {
@@ -120,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				BCC2E07525F6E4C700D2C8E0 /* Common */,
-				BCC2E06A25F6D9F400D2C8E0 /* Vehicle */,
 				BCC2E06925F6D9E300D2C8E0 /* Parking */,
 				BCC2E02325F6C00600D2C8E0 /* Domain.h */,
 				BCC2E02425F6C00600D2C8E0 /* Info.plist */,
@@ -131,6 +160,8 @@
 		BCC2E02D25F6C00600D2C8E0 /* DomainTests */ = {
 			isa = PBXGroup;
 			children = (
+				BCBC0EED26000138006D480B /* Service */,
+				BCBC0EEC26000124006D480B /* Errors */,
 				BC2664AC25FBF058001D1E7D /* Mocks */,
 				BC26649B25FBE559001D1E7D /* Models */,
 				BCC2E0AC25F81B3900D2C8E0 /* Checker */,
@@ -143,21 +174,14 @@
 		BCC2E06925F6D9E300D2C8E0 /* Parking */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2E0A625F81A6000D2C8E0 /* Models */,
+				BCBC0EE625FFFC05006D480B /* Errors */,
+				BCBC0EE525FFFBF1006D480B /* Service */,
 				BCC2E0AA25F81AA200D2C8E0 /* Repository */,
 				BCC2E0A925F81A9700D2C8E0 /* Collector */,
 				BCC2E0A825F81A8F00D2C8E0 /* Checker */,
-				BCC2E0A725F81A7500D2C8E0 /* Models */,
 			);
 			path = Parking;
-			sourceTree = "<group>";
-		};
-		BCC2E06A25F6D9F400D2C8E0 /* Vehicle */ = {
-			isa = PBXGroup;
-			children = (
-				BCC2E0A625F81A6000D2C8E0 /* Models */,
-				BCC2E0A525F81A5800D2C8E0 /* Protocols */,
-			);
-			path = Vehicle;
 			sourceTree = "<group>";
 		};
 		BCC2E07525F6E4C700D2C8E0 /* Common */ = {
@@ -180,17 +204,9 @@
 		BCC2E0A625F81A6000D2C8E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2E0A525F81A5800D2C8E0 /* Protocols */,
 				BCC2E04F25F6D51800D2C8E0 /* VehicleType.swift */,
 				BCC2E05325F6D56300D2C8E0 /* Vehicle.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BCC2E0A725F81A7500D2C8E0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BCC2E06125F6D91500D2C8E0 /* ParkingManager.swift */,
-				BCC2E07125F6E12C00D2C8E0 /* ParkingError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -345,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCC2E06225F6D91500D2C8E0 /* ParkingManager.swift in Sources */,
+				BCC2E06225F6D91500D2C8E0 /* ParkingService.swift in Sources */,
 				BCC2E06625F6D93800D2C8E0 /* ParkingRepository.swift in Sources */,
 				BCC2E07725F6E4D000D2C8E0 /* WeekDay.swift in Sources */,
 				BCC2E06C25F6DFE400D2C8E0 /* ParkingChecker.swift in Sources */,
@@ -366,7 +382,7 @@
 				BCC2E09C25F7E0BD00D2C8E0 /* ParkingDebtCollectorTests.swift in Sources */,
 				BC26649D25FBE566001D1E7D /* VehicleTypeTests.swift in Sources */,
 				BC2664AE25FBF067001D1E7D /* RepositoryMock.swift in Sources */,
-				BC2664A925FBEF98001D1E7D /* ParkingManagerTests.swift in Sources */,
+				BC2664A925FBEF98001D1E7D /* ParkingServiceTests.swift in Sources */,
 				BC2664A525FBEDBA001D1E7D /* ParkingErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

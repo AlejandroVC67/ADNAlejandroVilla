@@ -136,14 +136,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC9E80FD25F835F700858302 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		BC9E80FE25F8361F00858302 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,14 +155,14 @@
 			path = ParkingForm;
 			sourceTree = "<group>";
 		};
-		BC9E810A25F8F21D00858302 /* Utils */ = {
+		BC9E810A25F8F21D00858302 /* UIExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				BC9E810B25F8F24D00858302 /* UIVIew+Extension.swift */,
 				BC26647B25FBC910001D1E7D /* Date+Extension.swift */,
 				BC26647F25FBC927001D1E7D /* UITableViewCell+Extension.swift */,
 			);
-			path = Utils;
+			path = UIExtensions;
 			sourceTree = "<group>";
 		};
 		BC9E811925F933BA00858302 /* ParkingList */ = {
@@ -208,12 +200,12 @@
 		BCADBC9B25F03E21005F403A /* ADNAlejandroVilla */ = {
 			isa = PBXGroup;
 			children = (
-				BC9E810A25F8F21D00858302 /* Utils */,
+				BC9E810A25F8F21D00858302 /* UIExtensions */,
 				BC9E80FE25F8361F00858302 /* Screens */,
 				BCADBCA525F03E25005F403A /* Assets.xcassets */,
-				BC9E80FD25F835F700858302 /* Storyboards */,
 				BCADBC9C25F03E21005F403A /* AppDelegate.swift */,
 				BCADBC9E25F03E22005F403A /* SceneDelegate.swift */,
+				BCADBCA725F03E25005F403A /* LaunchScreen.storyboard */,
 				BCADBCAA25F03E25005F403A /* Info.plist */,
 				BC26648325FBCC19001D1E7D /* DIContainer.swift */,
 			);
