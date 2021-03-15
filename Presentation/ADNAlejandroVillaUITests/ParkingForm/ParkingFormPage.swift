@@ -7,7 +7,7 @@
 
 import XCTest
 
-class ParkingFormUIElements {
+class ParkingFormPage {
 
     var app: XCUIApplication
     

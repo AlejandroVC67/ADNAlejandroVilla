@@ -33,7 +33,7 @@
 		BCADBCB425F03E26005F403A /* ADNAlejandroVillaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCB325F03E26005F403A /* ADNAlejandroVillaTests.swift */; };
 		BCADBCBF25F03E26005F403A /* ParkingFormUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADBCBE25F03E26005F403A /* ParkingFormUITests.swift */; };
 		BCBC0ED725FFAC43006D480B /* ParkingListUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBC0ED625FFAC43006D480B /* ParkingListUIElements.swift */; };
-		BCC22FC125FFA2410065699A /* ParkingFormUIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC22FC025FFA2410065699A /* ParkingFormUIElements.swift */; };
+		BCC22FC125FFA2410065699A /* ParkingFormPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC22FC025FFA2410065699A /* ParkingFormPage.swift */; };
 		BCC2E04025F6C02F00D2C8E0 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */; };
 		BCC2E04125F6C02F00D2C8E0 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -102,7 +102,7 @@
 		BCADBCBE25F03E26005F403A /* ParkingFormUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormUITests.swift; sourceTree = "<group>"; };
 		BCADBCC025F03E26005F403A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCBC0ED625FFAC43006D480B /* ParkingListUIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingListUIElements.swift; sourceTree = "<group>"; };
-		BCC22FC025FFA2410065699A /* ParkingFormUIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormUIElements.swift; sourceTree = "<group>"; };
+		BCC22FC025FFA2410065699A /* ParkingFormPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingFormPage.swift; sourceTree = "<group>"; };
 		BCC2E03F25F6C02F00D2C8E0 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -243,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				BCADBCBE25F03E26005F403A /* ParkingFormUITests.swift */,
-				BCC22FC025FFA2410065699A /* ParkingFormUIElements.swift */,
+				BCC22FC025FFA2410065699A /* ParkingFormPage.swift */,
 			);
 			path = ParkingForm;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 			files = (
 				BCBC0ED725FFAC43006D480B /* ParkingListUIElements.swift in Sources */,
 				BCADBCBF25F03E26005F403A /* ParkingFormUITests.swift in Sources */,
-				BCC22FC125FFA2410065699A /* ParkingFormUIElements.swift in Sources */,
+				BCC22FC125FFA2410065699A /* ParkingFormPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
