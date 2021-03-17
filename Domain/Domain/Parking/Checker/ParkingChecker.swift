@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ParkingCheckerProtocol {
+private protocol ParkingCheckerProtocol {
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError>
     static func checkAvailability(parkedVehicles: [Vehicle], type: VehicleType) -> Result<Bool, ParkingError>
     static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError>
@@ -24,7 +24,7 @@ class ParkingChecker: ParkingCheckerProtocol {
     static func canPark(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
         let vehicleAlreadyParked = checkPlatesDuplication(parkedVehicles: parkedVehicles, vehicle: vehicle)
         let isAParkingAvailable = checkAvailability(parkedVehicles: parkedVehicles, type: vehicle.type)
-        let platesValidation = checkPlates(vehicle: vehicle)
+        // let platesValidation = checkPlates(vehicle: vehicle) Disable this because when using DDD the validation should be located into the Vehicle model
         
         guard let _ = check(validation: vehicleAlreadyParked) else {
             return vehicleAlreadyParked
@@ -34,14 +34,15 @@ class ParkingChecker: ParkingCheckerProtocol {
             return isAParkingAvailable
         }
         
+        /*
         guard let _ = check(validation: platesValidation) else {
             return platesValidation
-        }
+        }*/
         
         return .success(true)
     }
     
-    static func checkAvailability(parkedVehicles: [Vehicle], type: VehicleType) -> Result<Bool, ParkingError> {
+    fileprivate static func checkAvailability(parkedVehicles: [Vehicle], type: VehicleType) -> Result<Bool, ParkingError> {
         let matchingType = parkedVehicles.filter { $0.type == type }
         
         switch type {
@@ -54,7 +55,7 @@ class ParkingChecker: ParkingCheckerProtocol {
         }
     }
     
-    static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError> {
+    fileprivate static func checkPlates(vehicle: Vehicle) -> Result<Bool, ParkingError> {
         let weekDayNumber = Calendar.current.component(.weekday, from: vehicle.startDate)
         guard let day = WeekDay(rawValue: weekDayNumber) else {
             return .failure(.unableToEnter)
@@ -72,7 +73,7 @@ class ParkingChecker: ParkingCheckerProtocol {
         return .success(true)
     }
     
-    static func checkPlatesDuplication(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
+    fileprivate static func checkPlatesDuplication(parkedVehicles: [Vehicle], vehicle: Vehicle) -> Result<Bool, ParkingError> {
         return parkedVehicles.contains(where: { $0.plates == vehicle.plates }) ? .failure(.duplicatePlates) : .success(true)
     }
     

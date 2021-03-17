@@ -22,7 +22,10 @@ public class RealmPersistence: ParkingRepository {
             return []
         }
         
-        let vehicles = VehicleTrasnslator.transformIntoVehicles(entities: entities)
+        guard let vehicles = VehicleTrasnslator.transformIntoVehicles(entities: entities)?.compactMap({ $0 }) else {
+            return []
+        }
+        
         return vehicles
     }
     

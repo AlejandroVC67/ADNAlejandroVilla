@@ -19,11 +19,11 @@ class VehicleTrasnslator {
         return entity
     }
     
-    static func transformIntoVehicles(entities: Results<VehicleEntity>) -> [Vehicle] {
-        return entities.map { (entity) -> Vehicle in
+    static func transformIntoVehicles(entities: Results<VehicleEntity>) -> [Vehicle?]? {
+        return entities.map { (entity) -> Vehicle? in
             let type = VehicleType(rawValue: entity.type) ?? .car
-
-            return Vehicle(plates: entity.plates,
+            
+            return try? Vehicle(plates: entity.plates,
                            type: type,
                            cylinder: entity.cylinder,
                            startDate: entity.startDate)

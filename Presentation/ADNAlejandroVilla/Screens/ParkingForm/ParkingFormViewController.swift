@@ -31,23 +31,21 @@ class ParkingFormViewController: UIViewController {
         return manager
     }()
     
-    private var viewModel: ParkingFormViewModel?
+    private lazy var viewModel: ParkingFormViewModel = {
+        let viewModel = ParkingFormViewModel(parkingHandler: manager)
+        viewModel.delegate = self
+        return viewModel
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        viewModel = ParkingFormViewModel(parkingHandler: manager)
-        viewModel?.delegate = self
         setupFormView()
     }
     
     private func setupFormView() {
         view.addSubview(formView)
-        
-        guard let viewModel = viewModel else {
-            return
-        }
-        
+    
         formView.setupView(formUIDelegate: self, formLogicDelegate: viewModel)
         formView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         formView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true

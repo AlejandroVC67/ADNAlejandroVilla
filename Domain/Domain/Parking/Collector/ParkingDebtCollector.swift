@@ -7,6 +7,10 @@
 
 import Foundation
 
+/**
+ This class handles the checkout proces of the vehicles, based on BRs it determines how much a vehicle owner should pay based on the parked time and other factors.
+ Since I'm following a DDD approach, i will disable this class and move all the logic to the Vehicle model under the Billable protocol
+ */
 class ParkingDebtCollector {
     enum CarPrices {
         static let valueHour: Double = 1000

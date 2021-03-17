@@ -11,4 +11,6 @@ protocol Identifiable {
     var plates: String { get }
     var type: VehicleType { get }
     var cylinder: Int { get }
+    
+    func checkPlates() throws
 }

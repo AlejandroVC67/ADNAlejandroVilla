@@ -25,7 +25,10 @@ class ParkingServiceTests: XCTestCase {
         // Given
         let mock = RepositoryMock()
         let manager = ParkingService(persistence: mock)
-        let vehicle = Vehicle(plates: "test", type: .car, cylinder: 100)
+        guard let vehicle = try? Vehicle(plates: "test", type: .car, cylinder: 100) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         
         // When
         let result = manager.add(vehicle: vehicle)
@@ -42,20 +45,14 @@ class ParkingServiceTests: XCTestCase {
     func testAdd_givenVehicleWithPlatesStartingWithAOnAWednesday_shouldReturnFailure() {
         // Given
         let mock = RepositoryMock()
-        let manager = ParkingService(persistence: mock)
-         
-        let vehicle = Vehicle(plates: "ABC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
         
-        // When
-        let result = manager.add(vehicle: vehicle)
-        
-        // Then
-        switch result {
-        case .success:
-            XCTFail("Shouldn't be able to park")
-        case .failure:
+        // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
+        guard let vehicle = try? Vehicle(plates: "ABC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) else {
             XCTAssertTrue(true, "The vehicle was not able to enter")
+            return
         }
+        
+        XCTFail("Shouldn't be able to park")
     }
     
     func testExitVehicle_givenVehiclePlates_shouldRemoveVehicle() {
@@ -63,7 +60,11 @@ class ParkingServiceTests: XCTestCase {
         let mock = RepositoryMock()
         let manager = ParkingService(persistence: mock)
          
-        let vehicle = Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
+        // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
+        guard let vehicle = try? Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         _ = manager.add(vehicle: vehicle)
         
         // When
@@ -77,8 +78,12 @@ class ParkingServiceTests: XCTestCase {
         // Given
         let mock = RepositoryMock()
         let manager = ParkingService(persistence: mock)
-         
-        let vehicle = Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
+        
+        // Wed Mar 10 2021 08:00:00 GMT-0500 (Colombia Standard Time)
+        guard let vehicle = try? Vehicle(plates: "BBC123", type: .car, cylinder: 100, startDate: Date(timeIntervalSince1970: 1615381200)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         
         // When
         let price = manager.exitVehicle(plates: vehicle.plates)

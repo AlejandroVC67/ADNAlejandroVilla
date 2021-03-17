@@ -9,7 +9,7 @@ import UIKit
 import Domain
 
 protocol FormLogicDelegate: class {
-    func handleParkIn(for vehicle: Vehicle)
+    func handleParkIn(plates: String, cylinder: Int, type: VehicleType)
     
 }
 
@@ -156,8 +156,7 @@ class FormView: UIScrollView {
             return
         }
         
-        let vehicle = Vehicle(plates: plates, type: vehicleType, cylinder: cylinder)
-        formLogicDelegate?.handleParkIn(for: vehicle)
+        formLogicDelegate?.handleParkIn(plates: plates, cylinder: cylinder, type: vehicleType)
         resetForm()
     }
     

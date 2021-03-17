@@ -23,11 +23,19 @@ class ParkingFormViewModel {
 }
 
 extension ParkingFormViewModel: FormLogicDelegate {
-    func handleParkIn(for vehicle: Vehicle) {
-        let didPark = parkingManager.add(vehicle: vehicle)
-        switch didPark {
-        case .success(let message): delegate?.showAlert(with: message)
-        case .failure(let error): delegate?.showAlert(with: error.errorDescription)
+    func handleParkIn(plates: String, cylinder: Int, type: VehicleType) {
+        do {
+            let vehicle = try Vehicle(plates: plates, type: type, cylinder: cylinder)
+            let didPark = parkingManager.add(vehicle: vehicle)
+            switch didPark {
+            case .success(let message): delegate?.showAlert(with: message)
+            case .failure(let error): delegate?.showAlert(with: error.errorDescription)
+            }
+        } catch let error as ParkingError {
+            delegate?.showAlert(with: error.errorDescription)
+        } catch {
+            delegate?.showAlert(with: error.localizedDescription)
         }
+
     }
 }

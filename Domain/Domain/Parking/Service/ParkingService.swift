@@ -35,7 +35,7 @@ public class ParkingService {
             return 0
         }
         
-        let price = ParkingDebtCollector(vehicle: vehicle).calculateCheckout()
+        let price = vehicle.calculateCheckout()
         persistence.exitVehicle(plates: plates)
         return price
     }

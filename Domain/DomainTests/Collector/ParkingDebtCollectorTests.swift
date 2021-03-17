@@ -13,7 +13,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenCarParked1DayAnd4HoursAgo_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 12000
-        let vehicle = Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -100800))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -100800)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When
@@ -26,7 +29,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenCarParked6HoursAgo_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 6000
-        let vehicle = Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -21600))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -21600)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When
@@ -39,7 +45,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenCarParked9HoursAgo_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 8000
-        let vehicle = Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -32400))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -32400))  else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When
@@ -52,7 +61,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenCarParked15HoursAgo_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 14000
-        let vehicle = Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -54000))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .car, cylinder: 200, startDate: Date(timeIntervalSinceNow: -54000)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When
@@ -65,7 +77,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenBikeParked1DayAnd4HoursAgoAndLowCylinder_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 6000
-        let vehicle = Vehicle(plates: "abc123", type: .bike, cylinder: 200, startDate: Date(timeIntervalSinceNow: -100800))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .bike, cylinder: 200, startDate: Date(timeIntervalSinceNow: -100800)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When
@@ -78,7 +93,10 @@ class ParkingDebtCollectorTests: XCTestCase {
     func testCalculateCheckout_givenBikeParked1DayAnd4HoursAgoAndHighCylinder_shouldHaveCorrectPrice() {
         // Given
         let expectedPrice: Double = 8000
-        let vehicle = Vehicle(plates: "abc123", type: .bike, cylinder: 800, startDate: Date(timeIntervalSinceNow: -100800))
+        guard let vehicle = try? Vehicle(plates: "abc123", type: .bike, cylinder: 800, startDate: Date(timeIntervalSinceNow: -100800)) else {
+            XCTFail("Should be able to create vehicle")
+            return
+        }
         let collector = ParkingDebtCollector(vehicle: vehicle)
         
         // When

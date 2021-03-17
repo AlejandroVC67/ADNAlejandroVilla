@@ -14,7 +14,10 @@ class VehicleTranslatorTests: XCTestCase {
     
     func testTransformIntoEntity_givenVehicle_shouldReturnVehicleEntity() {
         // Given
-        let vehicle = Vehicle(plates: "test", type: .car, cylinder: 100, startDate: Date())
+        guard let vehicle = try? Vehicle(plates: "test", type: .car, cylinder: 100, startDate: Date()) else {
+            XCTFail("should be able to create vehicle")
+            return
+        }
         
         // When
         let entity = VehicleTrasnslator.transformIntoEntity(vehicle: vehicle)
